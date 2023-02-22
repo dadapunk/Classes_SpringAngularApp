@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -13,16 +13,19 @@ export class AddClassFormComponentComponent {
   teacher= '';
   apiUrl = 'http://localhost:8080/classes/new/';
 
+  @Output() classAdded = new EventEmitter<void>();
+
+
   constructor(private http: HttpClient) { }
 
   onSubmit() {
     const newClass = {
       title: this.title,
       description: this.description,
-      teacher: this.teacher
     };
     this.http.post(this.apiUrl, newClass).subscribe(() => {
       console.log('Class added successfully.');
+      this.classAdded.emit();
     });
   }
 }
