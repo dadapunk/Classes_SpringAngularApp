@@ -1,0 +1,12 @@
+<form (submit)="onSubmit()">
+    <label>
+      Title:
+      <input type="text" [(ngModel)]="title" name="title" required>
+    </label>
+    <label>
+      Description:
+      <input type="text" [(ngModel)]="description" name="description" required>
+    </label>
+    <button type="submit">Add Class</button>
+  </form>
+  
