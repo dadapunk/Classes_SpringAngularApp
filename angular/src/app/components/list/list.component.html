@@ -1,0 +1,18 @@
+<p>list works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let class of classes">
+        <td>{{ class.id }}</td>
+        <td>{{ class.title }}</td>
+        <td>{{ class.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
