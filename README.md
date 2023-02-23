@@ -10,30 +10,28 @@ Running the Application
 Clone the repository:
 
 ```bash
-Copy code
 git clone https://github.com/your-username/your-project.git
 cd your-project
 Build the Angular frontend:
 ```
 
-bash
-Copy code
+```bash
 cd frontend
 npm install
 ng build
+```
 Build the Spring Boot backend:
 
-bash
-Copy code
+```bash
 cd ../backend
 mvn clean package
 Start the application:
 mvn spring-boot:run
+```
 
-
-bash
-Copy code
+```bash
 java -jar target/backend-0.0.1-SNAPSHOT.jar
+```
 The application will be running at http://localhost:8080.
 
 Configuration
