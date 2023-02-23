@@ -15,11 +15,13 @@ public class ClassController {
         private ClassRepository classRepository;
 
         @GetMapping("/")
+        @CrossOrigin
         public List<Class> getAllClasses() {
             return classRepository.findAll();
         }
 
         @PostMapping("new/")
+        @CrossOrigin
         public Class addClass(@RequestBody Class newClass) {
             return classRepository.save(newClass);
         }
