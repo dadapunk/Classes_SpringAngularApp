@@ -9,11 +9,12 @@ Maven
 Running the Application
 Clone the repository:
 
-bash
+```bash
 Copy code
 git clone https://github.com/your-username/your-project.git
 cd your-project
 Build the Angular frontend:
+```
 
 bash
 Copy code
